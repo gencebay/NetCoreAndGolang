@@ -25,8 +25,8 @@ func (p *program) run() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	combined := path.Join(dir, "public")
-	panic(http.ListenAndServe(":80", http.FileServer(http.Dir(combined))))
+	combined := path.Join(path.Dir(dir), "../wwwroot")
+	panic(http.ListenAndServe(":1444", http.FileServer(http.Dir(combined))))
 }
 func (p *program) Stop(s service.Service) error {
 	// Stop should not block. Return with a few seconds.

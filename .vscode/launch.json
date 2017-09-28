@@ -8,7 +8,7 @@
             "name": ".NET Core Launch (web)",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build",
+            "preLaunchTask": "build-dotnet",
             // If you have changed target frameworks, make sure to update the program path.
             "program": "${workspaceRoot}/NetCoreApp/bin/Debug/netcoreapp2.0/NetCoreApp.dll",
             "args": [],
@@ -41,6 +41,19 @@
             "type": "coreclr",
             "request": "attach",
             "processId": "${command:pickProcess}"
-        }
+        },
+        {
+			"name": "Go Launch",
+			"type": "go",
+			"request": "launch",
+			"mode": "debug",
+			"remotePath": "",
+			"port": 2345,
+			"host": "127.0.0.1",
+			"program": "${workspaceRoot}/Golang/src",
+			"env": {},
+			"args": [],
+			"showLog": true
+		}
     ]
 }
