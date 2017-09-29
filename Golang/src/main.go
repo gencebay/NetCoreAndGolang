@@ -35,9 +35,9 @@ func (p *program) Stop(s service.Service) error {
 
 func main() {
 	svcConfig := &service.Config{
-		Name:        "GoStaticServe",
+		Name:        "GoStaticServer",
 		DisplayName: "Go Static File Server",
-		Description: "Static file server to specified directory",
+		Description: "Static file server",
 	}
 
 	prg := &program{}
